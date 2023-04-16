@@ -1,0 +1,38 @@
+{% extends "layout_hdp.html" %}
+{% block content %}
+<div class="row justify-content-md-center mb-4">
+    <h3 class='text-primary'>Prediction</h3>
+</div>
+<div class='background_image_doctor container-fluid'>
+    <div class="inner_div container-fluid">
+        <h1 class="main_heading">
+            {{main_heading}}
+        </h1>
+        <h4 class="secondary_heading">
+            {{sub_heading}}
+        </h4>
+        {% if not go_back %} 
+        <a 
+            href='https://www.google.com/search?q=heart+hospital+near+me&rlz=1C1CHBF_enIN924IN924&oq=heart+hospital+near+me&aqs=chrome..69i57.139j0j7&sourceid=chrome&ie=UTF-8'
+            target="_blank"
+            class="badge bg-primary text-wrap hover_effect" style="width: 15rem;margin-left:auto;margin-right:auto"
+        >
+                <p >
+                    CONSULT DOCTOR
+                </p>
+        </a>
+        {% endif %}
+
+        {% if go_back %} 
+        <a 
+        href='/'
+        class="badge bg-primary text-wrap hover_effect" style="width: 15rem;margin-left:auto;margin-right:auto">
+                <p >
+                    GO BACK
+                </p>
+        </a>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

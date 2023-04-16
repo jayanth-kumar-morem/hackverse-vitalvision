@@ -1,0 +1,8 @@
+flask --use-feature=2020-resolver
+werkzeug --use-feature=2020-resolver
+tensorflow-cpu --use-feature=2020-resolver
+numpy --use-feature=2020-resolver
+pillow --use-feature=2020-resolver
+googledrivedownloader --use-feature=2020-resolver
+opencv-python-headless --use-feature=2020-resolver
+gunicorn --use-feature=2020-resolver

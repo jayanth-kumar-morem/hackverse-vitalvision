@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="row justify-content-md-center mb-4">
+        <h2 class='text-primary'> Heart Disease Prediction </h2>
+    </div>
+    
+
+    <div class="form-container ">
+        <form class="form-horizontal" action = "/predict/" method="post">
+        
+
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="age">Age</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="age" name="age" placeholder="Age in Years">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="sex">Sex</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="sex" name="sex" placeholder="M or F">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <label class="control-label col-sm-2" for="chest_pain">Chest Pain Type</label>
+                <label>asymptomatic or atypical angina non-anginal pain or typical angina</label>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="chest_pain" name="chest_pain" placeholder="asymptomatic or atypical angina non-anginal pain or typical angina">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="trestbps">trestbps : </label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="trestbps" name="trestbps">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="chol">Cholesterol  : </label>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="chol" name="chol">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="fbs"> fasting blood sugar  : </label>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="fbs" name="fbs">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="restecg"> resting electrocardiographic results  : </label>
+                <p>— Value 0: showing probable or definite left ventricular hypertrophy by Estes’ criteria
+                    — Value 1: normal
+                    — Value 2: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</p>
+                
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="restecg" name="restecg" placeholder="0 or 1 or 2">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="thalach"> maximum heart rate achieved  : </label>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="thalach" name="thalach" placeholder="0 or 1 or 2">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="exang"> Exercise induced angina  : </label>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="exang" name="exang" placeholder=" 1 = yes , 0 = no">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="oldpeak"> ST depression induced by exercise relative to rest   : </label>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="oldpeak" name="oldpeak" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="slope"> slope of the peak exercise ST segment   : </label>
+                <p>0: downsloping; 1: flat; 2: upsloping</p>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="slope" name="slope" placeholder="0: downsloping; 1: flat; 2: upsloping">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="ca">  number of major vessels   : </label>
+                <div class="col-sm-4">          
+                  <input type="text" class="form-control" id="ca" name="ca" placeholder=" 0 or 1 or 2 or 3">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2" for="thal"> A blood disorder called thalassemia Value    : </label>
+                <p>Value 1: fixed defect (no blood flow in some part of the heart)
+                    Value 2: normal blood flow
+                    Value 3: reversible defect (a blood flow is observed but it is not normal)</p>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="thal" name="thal" placeholder=" 1 or 2 or 3 ">
+                </div>
+            </div>
+
+
+            <div class="form-group row"> 
+            <label class="control-label col-sm-2" for="">&nbsp;</label>                
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </div>
+            </div>
+          </form>
+    </div>
+
+
+</body>
+</html>

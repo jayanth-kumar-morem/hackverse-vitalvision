@@ -1,0 +1,57 @@
+{%extends "layout.html" %}
+{%block body%}
+        <div id="preloader">
+            <div class="jumper">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>  
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="/" class="logo">
+                            HeartBit
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="active">About</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data">Dataset Link</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+          <div class="item">
+            <div class="img-fill">
+                <img src="{{backgroundImage}}" alt="">
+                <div class="text-content">
+                  <h3>Thank you for reviewing our Model </h3>
+                  <h5>The Extracted details for the input image is " {{pred}} "</h5>
+                  <img style="height: 120px;object-fit: scale-down;" src={{inputImageAddr}} />
+                  <a href="/" class="main-stroked-button">GO BACK</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/jayanth-kumar-14a4811b5/" class="main-filled-button">CONTACT ME</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                
+            </div>
+        </div>
+    </footer> 
+
+ {%endblock%}

@@ -1,0 +1,138 @@
+{%extends "layout.html" %}
+{%block head%}
+<style>
+.Modern-Slider .item h5 {
+    margin-bottom: 50px;
+  }
+</style>
+{%endblock%}
+{%block body%}
+        <!-- ***** Preloader Start ***** -->
+        <div id="preloader">
+            <div class="jumper">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>  
+        <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                            HeartBit
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="active">About</a></li>
+                            <li class="scroll-to-section"><a href="#subscribe">Predict</a></li>
+                            <li class="scroll-to-section"><a href="/hdp">Manual Check</a></li>
+                            <li class="scroll-to-section"><a target="_blank" href="https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data">Dataset Link</a></li>
+                            <!-- <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li>  -->
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+          <div class="item">
+            <div class="img-fill">
+                <img src="./static/images/slide-01.jpg" alt="">
+                <div class="text-content">
+                  <h3>Heart Bit</h3>
+                  <h5> Welcome To Capture, Extract, and Monitor Your Health Data in a Snap.</h5>
+                  <a href="#" class="main-stroked-button">Learn More</a>
+                  <a href="#" class="main-filled-button">Get It Now</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="img-fill">
+                <img src="./static/images/slide-02.jpg" alt="">
+                <div class="text-content">
+                  <h3>HeartScan.</h3>
+                  <h5> Instant Health Metrics Extraction from Cardiac Images.</h5>
+                  <a href="#" class="main-stroked-button">Read More</a>
+                  <a href="#" class="main-filled-button">Take Action</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+
+    <!-- <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>We work with top brands and startups</h2>
+                        </div>
+                        <img src="https://benchmark.ini.rub.de/material/6.png" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-text-content">
+                        <p>Traffic sign recognition is a multi-class classication problem with unbalanced class frequencies. Traffic signs can provide a wide range of variations between classes in terms of color, shape, and the presence of pictograms or text. However, there exist subsets of classes (e. g., speed limit signs) that are very similar to each other.
+                        <br><br>Humans are capable of recognizing the large variety of existing road signs with close to 100% correctness. This does not only apply to real-world driving, which provides both context and multiple views of a single traffic sign, but also to the recognition from single images.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <br/>
+    <section class="section" id="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h6>Now, Make a Extract details from ICU images</h6>
+                        <h2>The extraction of details is based upon a yolo.v7</h2>
+                    </div>
+                    <div class="subscribe-content">
+                        <p>Upload a image file</p>
+                        <div class="subscribe-form">
+                            <form action = "/predict/" method="post" enctype="multipart/form-data">
+                                <div class="input-group" style="align-items: center;">
+                                  <div class="custom-file">
+                                    <input type="file" name='file' class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                    <label id='labelForInput' class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button class="main-stroked-button" value='submit' type="submit" id="inputGroupFileAddon04">Predict</button>
+                                </div>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                
+            </div>
+        </div>
+    </footer> 
+
+ {%endblock%}
